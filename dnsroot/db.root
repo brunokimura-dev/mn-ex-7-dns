@@ -1,0 +1,14 @@
+$TTL   60000
+@               IN      SOA     ROOT-SERVER.    root.ROOT-SERVER. (
+                                         2017100301  ;serial
+                                         30          ;refresh
+                                         15          ;retry
+                                         60000       ;expire
+                                         0           ;negative cache ttl
+                                         )
+
+@               IN      NS      ROOT-SERVER.
+ROOT-SERVER.    IN      A       195.0.0.10
+
+org.            IN      NS      dnsorg.org.
+dnsorg.org.     IN      A       195.0.0.21
