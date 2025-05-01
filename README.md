@@ -2,8 +2,6 @@
 
 This project demonstrates a hierarchical DNS configuration using BIND9 within a Mininet emulated network. 
 
----
-
 ## DNS Hierarchy and Network Topology
 
 ![Network topology](dns-topo.jpg)
