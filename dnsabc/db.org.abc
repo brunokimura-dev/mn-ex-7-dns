@@ -1,0 +1,12 @@
+$TTL     60000
+@        IN      SOA       dnsabc.abc.org. admin.dnsabc.abc.org. (
+                                2017100301  ;serial
+                                30          ;refresh
+                                15          ;retry
+                                60000       ;expire
+                                0           ;negative cache ttl
+                                )
+@        IN      NS        dnsabc.abc.org.
+dnsabc   IN      A         195.0.0.31
+www1     IN      A         195.0.0.41
+
