@@ -6,7 +6,7 @@ This project demonstrates a hierarchical DNS configuration using BIND9 within a 
 
 ## DNS Hierarchy and Network Topology
 
-![Network topology](dns-topo.png)
+![Network topology](dns-topo.jpg)
 
 ---
 
