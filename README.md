@@ -1,4 +1,4 @@
 DNS hierarchy and network topology.
 
-![Network topology](dns-topo.pdf)
+![Network topology](dns-topo.jpg)
 
