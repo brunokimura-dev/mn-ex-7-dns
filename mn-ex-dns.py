@@ -52,6 +52,7 @@ def os_system(cmd):
 def cleanup_bind():
         os_system('rm -rdf /home/mininet/*')
         os_system('rm -rdf /mnt/dns*')
+        os_system('rm -rdf *.dump')
         os_system('pkill named')
         os_system('pkill bind')
 
@@ -61,6 +62,9 @@ def set_start_named(net, node):
 def set_host_nameserver(net, node, name_server):
         net[node].cmdPrint("echo 'nameserver {}' > /etc/resolv.conf".format(name_server))
         net[node].cmdPrint("cat /etc/resolv.conf")
+
+def dump_net(net, node):
+        net[node].cmdPrint("tcpdump -i {}-eth0 port 53 -n -vvv -l > {}.dump & ".format(node, node))
 
 def run():
         cleanup_bind()
@@ -83,6 +87,11 @@ def run():
         set_host_nameserver(net, 'www2', '195.0.0.32')
         net['www2'].cmdPrint('ping -c 3 www1.abc.org')
 
+        dump_net(net, 'dnsroot')
+        dump_net(net, 'dnsorg')
+        dump_net(net, 'dnsabc')
+        dump_net(net, 'dnsxyz')
+        
         CLI(net)
         net.stop()
         cleanup()
