@@ -11,4 +11,3 @@ abc               IN       NS          dnsabc.abc.org.
 dnsabc.abc        IN       A           195.0.0.31
 xyz               IN       NS          dnsxyz.xyz.org.
 dnsxyz.xyz        IN       A           195.0.0.32
-
